@@ -1,0 +1,3 @@
+[submodule "NanoLog"]
+	path = NanoLog
+	url = https://github.com/Iyengar111/NanoLog.git

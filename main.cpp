@@ -1,6 +1,5 @@
-#include "SensorPresion.h"
-#include "SensorTemperatura.h"
-#include "SensorHumedad.h"
+#include <unistd.h>
+#include "Sensores.h"
 #include "LoRaWAN.h"
 
 int main() {
@@ -24,7 +23,7 @@ int main() {
     // Enviar los datos por LoRaWAN
     loraWAN.enviarDatos(temperatura, presion, humedad);
 
-    usleep(36000000); // 1 hora (36000000 microsegundos
+    sleep(3600); // 1 hora (3600segundos
     }
 
     return 0;

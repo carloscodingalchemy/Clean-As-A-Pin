@@ -1,5 +1,7 @@
 #include <unistd.h>
-#include "Sensores.h"
+#include "SensorPresion.h"
+#include "SensorTemperatura.h"
+#include "SensorHumedad.h"
 #include "LoRaWAN.h"
 
 int main() {
@@ -16,9 +18,9 @@ int main() {
 
     while(true) {
     // Leer los sensores
-    int presion = sensorPresion.leerPresion();
-    int temperatura = sensorTemperatura.leerTemperatura();
-    int humedad = sensorHumedad.leerHumedad();
+    int presion = sensorPresion.read();
+    int temperatura = sensorTemperatura.read();
+    int humedad = sensorHumedad.read();
 
     // Enviar los datos por LoRaWAN
     loraWAN.enviarDatos(temperatura, presion, humedad);

@@ -6,7 +6,7 @@ void UARTLoRa::init() {
     std::cout << "Inicializando UART para LoRa...\n";
 }
 
-void UARTLoRa::enviarComando(const char* comando) {
+void UARTLoRa::send(std::string &data, size_t len) {
     // Simular envío de comando vía UART
-    std::cout << "Enviando comando: " << comando << "\n";
+    std::cout << "Enviando comando: " << data << "\n";
 }

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "SensorPresion.h"
 
 void SensorPresion::init() {
@@ -5,7 +6,7 @@ void SensorPresion::init() {
     std::cout << "Inicializando sensor de presión...\n";
 }
 
-int32_t SensorPresion::leerPresion() {
+int32_t SensorPresion::read() {
     // Simular lectura de presión
     std::cout << "Leyendo presión...\n";
     return 1013;  // Retorna un valor simulado de presión

@@ -7,13 +7,12 @@ void LoRaWAN::init() {
     std::cout << "Inicializando protocolo LoRaWAN...\n";
 }
 
-void LoRaWAN::enviarDatos(int temperatura, int presion, int humedad) {
+void LoRaWAN::enviarDatos(int32_t temperatura, int32_t presion, int32_t humedad) {
     // Simular envío de datos a través de LoRaWAN
     UARTLoRa uart;
     uart.init();
     
     std::cout << "Enviando datos a través de LoRaWAN...\n";
-    char comando[100];
-    snprintf(comando, 100, "T:%d P:%d H:%d", temperatura, presion, humedad);
-    uart.enviarComando(comando);
+    std::string comando = "T:" + std::to_string(temperatura) + " P:" + std::to_string(presion) + " H:" + std::to_string(humedad);
+    uart.send(comando, comando.size());
 }

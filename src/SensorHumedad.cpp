@@ -6,7 +6,7 @@ void SensorHumedad::init() {
     std::cout << "Inicializando sensor de humedad...\n";
 }
 
-int SensorHumedad::leerHumedad() {
+int32_t SensorHumedad::leerHumedad() {
     // Simular lectura de humedad
     std::cout << "Leyendo humedad...\n";
     return 60;  // Retorna un valor simulado de humedad

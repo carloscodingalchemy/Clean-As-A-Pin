@@ -1,4 +1,4 @@
-
+#include <iostream>
 #include "SensorTemperatura.h"
 
 void SensorTemperatura::init() {
@@ -6,7 +6,7 @@ void SensorTemperatura::init() {
     std::cout << "Inicializando sensor de temperatura...\n";
 }
 
-int SensorTemperatura::leerTemperatura() {
+int32_t SensorTemperatura::read() {
     // Simular lectura de temperatura
     std::cout << "Leyendo temperatura...\n";
     return 25;  // Retorna un valor simulado de temperatura

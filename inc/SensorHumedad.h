@@ -1,12 +1,13 @@
-#ifndef SENSORE_HUMEDAD_H
-#define SENSORE_HUMEDAD_H
+#ifndef SENSOR_HUMEDAD_H
+#define SENSOR_HUMEDAD_H
 
+#include <cstdint>
 #include "ISensor.h"
 
 class SensorHumedad : public ISensor {
 public:
     void init() override;
-    int read() override;
+    int32_t read() override;
 };
 
 #endif

@@ -1,0 +1,15 @@
+{
+"C++ Header Guard": {
+   "prefix": "headerguard",
+   "body": [
+      "#ifndef ${TM_FILENAME/(.+)\\..+/${1:/upcase}/}_H",
+      "#define ${TM_FILENAME/(.+)\\..+/${1:/upcase}/}_H",
+      "",
+      "${TM_CURSOR}",
+      "",
+      "#endif // ${TM_FILENAME/(.+)\\..+/${1:/upcase}/}_H"
+   ],
+   "description": "Genera guardas para archivos de cabecera en C++"
+}
+
+}
